@@ -1,0 +1,16 @@
+[Unit]
+Description=temperature logger
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+EnvironmentFile=/etc/default/temperature
+User=root
+Group=root
+ExecStart=/usr/share/temperature/start.sh
+# Shutdown delay in seconds, before process is tried to be killed with KILL (if configured)
+TimeoutStopSec=120
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+STORAGE_DEVICE=/dev/sda1
+MOUNT_POINT=/tmp/stick
+DIRECTORY=mittaukset
+
+# temperature sensor read time interval in seconds
+TEMPERATURE_READ_INTERVAL=30
+
+# write interval in minutes 
+WRITE_INTERVAL=2
+
+TEST=N
+
+SEPARATOR=,
